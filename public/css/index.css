@@ -1,0 +1,411 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.mainDiv {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 55px;
+  float: right;
+  /* border: groove 4px rgb(173, 81, 45); */
+  background: burlywood;
+}
+
+/* Navbar start */
+.header {
+  background-color: rgb(127, 30, 30);
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100vw;
+  z-index: 3;
+  font-size: 2vh;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: rgb(240, 220, 191);;
+}
+
+.header li a {
+  display: block;
+  padding: 1px 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  border-right: 1px solid #f4f4f4;
+  color: black;
+  text-decoration: none;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  color: white;
+  text-shadow: 4px black;
+  font-size: 2em;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 0.5vh 2px;
+  text-decoration: none;
+}
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #fffefe;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #ffffff;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* Navbar ends here */
+
+label.logo {
+  color: rgb(245, 220, 183);
+  font-size: 35px;
+  line-height: 55px;
+  padding: 0 25px;
+  font-weight: bold;
+}
+nav ul {
+  float: right;
+  /* margin-right: 4vh    ; */
+}
+nav ul li,
+a {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bold;
+  /* text-transform: uppercase; */
+  line-height: 55px;
+  margin: 0 15px;
+  color: white;
+}
+nav ul a:hover {
+  color: rgb(246, 201, 134);
+}
+
+.container {
+  height: 100vh;
+  width: 50%;
+  float: left;
+  border: groove 4px rgb(173, 81, 45);
+  align-items: center;
+  padding: 2%;
+}
+.box {
+  margin: 3vh 0;
+}
+span#addHead {
+  color: rgb(94, 9, 9);
+  font-weight: bold;
+  font-size: 5vh;
+}
+
+span#address {
+  background: rgb(241, 221, 191);
+  font-size: 3vh;
+  border: solid 2px rgb(173, 81, 45);
+  border-radius: 5px;
+  font-weight: bold;
+  margin: 0 2vw;
+  padding: 1% 4%;
+}
+.container textarea {
+  background-color: rgb(243, 213, 168);
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 65%;
+  min-height: 65%;
+  border: groove 4px rgb(173, 81, 45);
+  font-size: 4vh;
+  font-weight: 700;
+  font-family: "Varela Round", sans-serif;
+  text-transform: capitalize;
+  padding: 2vh 2vh;
+  outline:none;
+}
+.compiler button {
+  float: right;
+  padding: 1vh 3vh;
+  margin: 1vh;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  border-radius: 20px;
+  font-size: 2vh;
+  color: white;
+}
+#run {
+  background-color: rgb(130, 41, 9);
+}
+#debug {
+  background-color: rgb(130, 41, 9);
+}
+.temp{
+  display: none;
+}
+#archi{
+  background-color: rgb(130, 41, 9);
+}
+.architecture {
+  position: relative;
+  height: 100vh;
+  width: 50%;
+  float: right;
+  border: groove 4px rgb(173, 81, 45);
+  padding: 3vh 4vw;
+  text-align: center;
+}
+.box {
+  text-align: center;
+}
+#archHeadline {
+  font-weight: bold;
+  color: rgb(94, 9, 9);
+  font-size: 5vh;
+  margin: 0 32%;
+  text-align: center;
+}
+.archHead {
+  font-weight: bold;
+  color: rgb(94, 9, 9);
+  font-size: 3vh;
+}
+.counters {
+  position: relative;
+  border: solid 2px black;
+  border-radius: 7px;
+  background-color: rgb(246, 201, 134);
+  padding-left: 4vw;
+  height: 12vh;
+}
+.counters span {
+  margin-right: 1vw;
+}
+.register-pairs {
+  position: relative;
+  border: 2px solid black;
+  border-radius: 1vh;
+  background-color: rgb(246, 201, 134);
+  margin: 2vh 10%;
+  height: 22vh;
+  width: 80%;
+  align-items: center;
+  align-content: center;
+}
+.flags {
+  position: relative;
+  border: solid 2px black;
+  border-radius: 7px;
+  background-color: rgb(246, 201, 134);
+  padding-left: 0.2vh;
+  margin: 0.8vh;
+  height: 15vh;
+}
+.flags .rpcontent div {
+  margin-left: 1vw;
+  float: left;
+}
+#pc,
+#sp,
+#accum,
+#B,
+#C,
+#D,
+#E,
+#H,
+#L {
+  background-color: rgb(241, 221, 191);
+  padding: 0.5vh 1vw;
+  font-size: 3vh;
+  height: 10vh;
+  border: solid 0.4vh rgb(132, 4, 4);
+  border-radius: 1.5vh;
+  /* margin-right: 3vw; */
+}
+#S,
+#Z,
+#P,
+#CY,
+#AC {
+  background-color: rgb(241, 221, 191);
+  padding: 0.4vh 1vw;
+  font-size: 3vh;
+  border: solid 0.4vh rgb(132, 4, 4);
+  border-radius: 1.5vh;
+  /* margin-right: 0vw; */
+}
+
+.rpcontent {
+  position: absolute;
+  left: 5%;
+  text-align: center;
+  font-size: 5vh;
+  width: 90%;
+  height: 100%;
+  /* border: 3px solid #73ad21; */
+  align-items: center;
+}
+.flags .rpcontent{
+  padding-left: 2vw;
+}
+.pairs {
+  align-self: center;
+  align-items: center;
+}
+
+/* Output Section */
+
+.output{
+  text-align: center;
+  color:rgb(127, 30, 30);
+  background: burlywood;
+}
+.output h1{
+  font-size: 4vh;
+}
+.outputText{
+  height: 400px;
+  border: 4px groove rgb(173, 81, 45);
+  background: burlywood;
+  width: 100%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.Address{
+  display: block;
+  margin-top:10px;
+}
+.Address input{
+    border-radius: 20px;
+    outline:none;
+    padding:5px;
+}
+.Address button{
+  position: relative;
+  cursor:pointer;
+  margin-top: 10px;
+  margin:5px;
+  border-radius: 20px;
+  background-color: rgb(127, 30, 30);
+  color:white;
+  padding:8px;
+}
+.Address button ::before{
+  left:-17px;
+  border-width:17px 17px 17px 0px;
+}
+.Address button ::after{
+  right:-17px;
+  border-width: 17px 0 17px 17px;
+}
+
+#dataOut{
+  margin:5px;
+  padding:6px;
+  border-radius: 20px;
+  outline:none;
+  background-color: rgb(127, 30, 30);
+  color:white;
+}
+
+@media screen and (max-width: 800px) {
+  .temp{
+    display: block;
+  }
+  .architecture {
+    float: none;
+    width: 100%;
+    font-size: 4vh;
+  }
+  .container {
+    float: none;
+    width: 100%;
+  }
+  #archHeadline,
+  span#addHead,
+  span#address {
+    font-size: 3vh;
+    text-align: center;
+  }
+  .register-pairs {
+    width: 50vw;
+    margin-left:20vw;
+  } 
+  .flags {
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+    padding:2px;
+    width: 40vw;
+    margin-left:25vw;
+  }
+  .architecture{
+    display: none;
+  }
+}

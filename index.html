@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./public/css/index.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400;500;600;700&family=Ubuntu:wght@300;400&family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="" class="logo">8085 Emulator</a>
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn"
+        ><span class="navicon"></span
+      ></label>
+      <ul class="menu">
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">References</a></li>
+        <li><a href="">Programs</a></li>
+      </ul>
+    </header>
+    <div class="mainDiv">
+      <div class="container">
+        <div class="box">
+          <span id="addHead">Current Address: </span>
+          <span id="address">2000</span>
+        </div>
+        <textarea
+          name="code"
+          id="code"
+          placeholder="Write your code here..."
+        ></textarea>
+        <div class="compiler">
+          <button id="run">Run</button>
+          <button id="debug">Debug</button>
+          <a href="./architectue.html" style="float: right"
+            ><button id="archi" class="temp">Architecture</button></a
+          >
+        </div>
+         <div class="Address">
+          <input  id="fetchAddress" type="text" placeholder="Address">
+          <span id="dataOut">Data</span>
+          <br>
+          <button>Prev</button>
+          <button id="fetch">Fetch</button>
+          <button  type="submit">Next</button>
+        </div>
+      </div>
+      <div class="architecture">
+        <div class="box">
+          <span id="archHeadline">Architecture</span>
+        </div>
+        <div class="counters">
+          <div class="count rpcontent">
+            <span class="archHead">PC:</span>
+            <span id="pc">0000</span>
+            <span class="archHead">SP:</span>
+            <span id="sp">0000</span>
+            <span class="archHead">A:</span>
+            <span id="accum">00</span>
+          </div>
+        </div>
+        <div class="register-pairs">
+          <div class="rp rpcontent">
+            <div class="pairs">
+              <span class="archHead">B :</span>
+              <span id="B">00</span>
+              <span class="archHead">C :</span>
+              <span id="C">00</span>
+            </div>
+            <div class="pairs">
+              <span class="archHead">D :</span>
+              <span id="D">00</span>
+              <span class="archHead">E :</span>
+              <span id="E">00</span>
+            </div>
+            <div class="pairs">
+              <span class="archHead">H :</span>
+              <span id="H">00</span>
+              <span class="archHead">L :</span>
+              <span id="L">00</span>
+            </div>
+          </div>
+        </div>
+        <div class="flags">
+          <div class="fg rpcontent">
+            <div>
+              <span class="archHead">S :</span>
+              <span id="S">0</span>
+              <span class="archHead">Z :</span>
+              <span id="Z">0</span>
+            </div>
+            <div>
+              <span class="archHead">C :</span>
+              <span id="CY">0</span>
+              <span class="archHead">P:</span>
+              <span id="P">0</span>
+            </div>
+            <div>
+              <span class="archHead">AC:</span>
+              <span id="AC">0</span>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+    <!--Output section-->
+  </body>
+  <script src="./public/script/text.js" type="module"></script>
+</html>

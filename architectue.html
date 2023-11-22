@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/css/archi.css">
+    <title>Architecture</title>
+</head>
+<body>
+<table class="architecture">
+  <thead>
+    <tr>
+      <th colspan="3">Architecture</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="counters">
+        <table>
+          <tr>
+            <td class="archHead">PC:</td>
+            <td><span id="pc">0000</span></td>
+          </tr>
+          <tr>
+            <td class="archHead">SP:</td>
+            <td><span id="sp">0000</span></td>
+          </tr>
+          <tr>
+            <td class="archHead">A:</td>
+            <td><span id="accum">00</span></td>
+          </tr>
+        </table>
+      </td>
+      <td class="register-pairs">
+        <table>
+          <tr>
+            <td class="pairs">
+              <span class="archHead">B :</span>
+              <span id="B">00</span>
+            </td>
+            <td class="pairs">
+              <span class="archHead">C :</span>
+              <span id="C">00</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="pairs">
+              <span class="archHead">D :</span>
+              <span id="D">00</span>
+            </td>
+            <td class="pairs">
+              <span class="archHead">E :</span>
+              <span id="E">00</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="pairs">
+              <span class="archHead">H :</span>
+              <span id="H">00</span>
+            </td>
+            <td class="pairs">
+              <span class="archHead">L :</span>
+              <span id="L">00</span>
+            </td>
+          </tr>
+        </table>
+      </td>
+      <td class="flags">
+        <table>
+          <tr>
+            <td>
+              <span class="archHead">S :</span>
+              <span id="S">0</span>
+            </td>
+            <td>
+              <span class="archHead">Z :</span>
+              <span id="Z">0</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="archHead">C :</span>
+              <span id="CY">0</span>
+            </td>
+            <td>
+              <span class="archHead">P:</span>
+              <span id="P">0</span>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <span class="archHead">AC:</span>
+              <span id="AC">0</span>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<button class="goback"><a href="index.html">Go Back</a></button>
+</body>
+</html>

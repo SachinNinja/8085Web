@@ -1,0 +1,90 @@
+/* Base styles */
+body{
+  background-color: rgb(243, 213, 168);
+}
+.architecture {
+  border-collapse: collapse;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: rgb(243, 213, 168);
+}
+
+.architecture th,
+.architecture td {
+  border: 2px solid rgb(173, 81, 45);;
+  padding: 10px;
+  text-align: center;
+}
+
+.archHead {
+  font-weight: bold;
+}
+.goback{
+  text-align:center;
+  margin-top:20px;
+  margin-left:35vw;
+  background-color: rgb(173, 81, 45);
+  border-radius: 20px;
+  padding: 10px;
+}
+.goback a{
+  text-decoration: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color:white; 
+}
+
+/* Styles for smaller screens */
+@media only screen and (max-width: 600px) {
+  .architecture {
+    font-size: 14px;
+  }
+  
+  .architecture th,
+  .architecture td {
+    padding: 5px;
+  }
+  
+  .pairs {
+    display: block;
+  }
+  
+  .pairs span {
+    display: block;
+  }
+}
+
+/* Styles for larger screens */
+@media only screen and (min-width: 1200px) {
+  .architecture {
+    font-size: 18px;
+  }
+  
+  .architecture th,
+  .architecture td {
+    padding: 15px;
+  }
+}
+
+/* Colors and other styles */
+.architecture th {
+  background-color: rgb(173, 81, 45);;
+  color: #ffffff;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+}
+
+.architecture td.counters table td {
+  padding: 5px;
+}
+
+.architecture td.register-pairs table td {
+  padding: 5px 10px;
+}
+
+.architecture td.flags table td {
+  padding: 5px 10px;
+}
+
